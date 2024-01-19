@@ -1,0 +1,9 @@
+import pandas as pd
+article = pd.read_csv('dataset.csv', delimiter=';')
+names = ['user_name', 'user_id', 'user_country', "user_age"]
+article.to_csv("dataset.csv", index=False, sep=";")
+col = str(input(''))
+num = int(input(''))
+def read_slot():
+    print(article.at[num, col])
+read_slot()
